@@ -1,0 +1,79 @@
+*{    box-sizing: border-box;}
+body{
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+}
+.clock{
+display: flex;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(19, 158, 147);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 10px #333;
+}
+.clock .square{
+    position: absolute;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    align-items: center;
+    justify-items: center;
+    width: 380px;
+    height: 380px;
+}
+.clock .one{
+    transform: rotateZ(-45deg);
+}
+.clock .two{
+    transform: rotateZ(-15deg);
+}
+.clock .three{
+    transform: rotateZ(15deg);
+}
+.clock .square>div{
+    font-size: 20px;
+}
+.clock .one>div{
+    transform: rotateZ(45deg);
+}
+.clock .two>div{
+    transform: rotateZ(15deg);
+}
+.clock .three>div{
+    transform: rotateZ(-15deg);
+}
+
+.clock .analogs{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+}
+.clock .analogs .overlay{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.clock .analogs .overlay div{
+    position: absolute;
+    width: 2px;
+    height: calc(var(--i) * 70px);
+    transform-origin: 50% 100%;
+    bottom: 50%;
+    left: 50%;
+    box-shadow: 0 0 3px #eee;
+}
+.clock .square-two{
+
+}
